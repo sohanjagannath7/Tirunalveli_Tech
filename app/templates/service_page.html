@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ service.title }}{% endblock %}
+{% block description %}{{ service.intro[0] }}{% endblock %}
+
+{% block content %}
+<h1>{{ service.h1 }}</h1>
+
+{% for paragraph in service.intro %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+
+<h2>Services usually include:</h2>
+<ul>
+    {% for item in service.services_list %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Available Technicians in {{ service.h1.replace(' Services in Tirunelveli', '').replace(' in Tirunelveli', '') }}
+</h2>
+<div class="tech-grid">
+    {% for tech in service.technicians %}
+    <div class="tech-card">
+        <div class="tech-name">{{ tech.name }}</div>
+        <div class="tech-meta">
+            <span class="tech-meta-icon">📍</span> {{ tech.location }}
+        </div>
+        <div class="tech-meta">
+            <span class="tech-meta-icon">⭐</span> {{ tech.experience }} exp.
+        </div>
+        <a href="https://wa.me/{{ tech.phone }}?text=Hi, I saw your listing on Tirunelveli Techs. I need service."
+            class="whatsapp-button" target="_blank" rel="noopener">
+            Chat on WhatsApp
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+
+<p style="margin-top: 2rem; font-size: 0.9em;">
+    <a href="/technicians">&larr; Back to all technicians</a>
+</p>
+{% endblock %}

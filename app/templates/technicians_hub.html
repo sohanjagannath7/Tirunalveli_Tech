@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock %}
+{% block description %}{{ page.content[0] }}{% endblock %}
+
+{% block content %}
+<h1>{{ page.h1 }}</h1>
+
+{% for paragraph in page.content %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+
+<h2>Available Services</h2>
+<div class="services-grid">
+    {% for slug, service in services.items() %}
+    <div class="service-card">
+        <a href="/technicians/{{ slug }}">
+            <h3>{{ service.h1.replace(' in Tirunelveli', '') }}</h3>
+            <p>{{ service.intro[0][:100] }}...</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

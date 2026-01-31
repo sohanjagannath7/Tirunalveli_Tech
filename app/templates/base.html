@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Technician Services in Tirunelveli{% endblock %}</title>
+    <meta name="description" content="{% block description %}Find reliable local technicians in Tirunelveli for repairs and home services.{% endblock %}">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="canonical" href="https://example.com{{ request.url.path }}"> 
+    <!-- Note: In production replace example.com with actual domain -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Tirunelveli Techs</a>
+            <div>
+                <a href="/technicians" style="margin-right: 15px;">Technicians</a>
+                <a href="/spare-parts/tirunelveli">Spare Parts</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Technician Services Tirunelveli. <a href="/about">About</a> | <a href="/contact">Contact</a></p>
+    </footer>
+</body>
+</html>

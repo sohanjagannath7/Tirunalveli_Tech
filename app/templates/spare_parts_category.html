@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.title }}{% endblock %}
+{% block description %}{{ category.intro[0] }}{% endblock %}
+
+{% block content %}
+<h1>{{ category.h1 }}</h1>
+
+{% for paragraph in category.intro %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+
+<h2>Available Dealers</h2>
+<div class="tech-grid">
+    {% for dealer in category.dealers %}
+    <div class="tech-card">
+        <div class="tech-name">{{ dealer.name }}</div>
+        <div class="tech-meta">
+            <span class="tech-meta-icon">📍</span> {{ dealer.area }}
+        </div>
+        <div class="tech-meta">
+            <span class="tech-meta-icon">📦</span> {{ dealer.category }}
+        </div>
+        <div class="tech-meta" style="margin-top: 0.5rem; font-style: italic; color: #666;">
+            {{ dealer.description }}
+        </div>
+        <a href="https://wa.me/{{ dealer.phone }}?text=Hi, do you have spare parts available?" class="whatsapp-button"
+            target="_blank" rel="noopener">
+            Contact Dealer
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<p style="margin-top: 2rem; font-size: 0.9em;">
+    <a href="/spare-parts/tirunelveli">&larr; Back to all spare parts</a>
+</p>
+
+{% endblock %}
