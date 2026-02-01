@@ -34,16 +34,19 @@ PAGES = {
         "title": "About Us | Technician Services Tirunelveli",
         "h1": "About Us",
         "content": [
-            "We are a directory service dedicated to connecting the residents of Tirunelveli with skilled local technicians.",
-            "Our goal is to organize local service information to make it accessible and useful."
+            "We are building a local service discovery platform focused on helping people in Tirunelveli find reliable technicians and service professionals more easily.",
+            "Finding the right technician for electronics repair, appliance servicing, or home services can be time-consuming and confusing. Our goal is to simplify this process by organizing service categories clearly and making it easier for customers to understand the types of services available locally.",
+            "This website is currently in an early stage and is being developed as a testing platform to understand service demand and search visibility. Over time, we aim to improve accuracy, coverage, and usefulness for both customers and service professionals in Tirunelveli.",
+            "We believe that better visibility helps skilled technicians reach customers faster while allowing users to make informed decisions when choosing local services."
         ]
     },
     "contact": {
         "title": "Contact Us | Technician Services Tirunelveli",
         "h1": "Contact Us",
         "content": [
-            "For inquiries or to list your service, please reach out to us.",
-            "Email: contact@example.com"
+            "This website is currently in an early testing phase.",
+            "The purpose of this platform is to understand local service categories and search visibility in Tirunelveli.",
+            "Contact details and additional features will be added in a future phase."
         ]
     }
 }
